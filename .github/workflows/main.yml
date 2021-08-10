@@ -1,6 +1,11 @@
 name: Push File to chnynf's hexo site
 
-on: push
+on: 
+  push:
+    path: 
+      - "data-science-notes.md"
+    branches:
+      - main
 
 jobs:
   copy-file:
