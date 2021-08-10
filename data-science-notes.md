@@ -1,7 +1,7 @@
 ---
 title: Data Science Notes
 date: 2021-08-09 00:50:30
-updated: 2021-08-10
+updated: 2021-08-09
 tags:
 ---
 
