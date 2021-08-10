@@ -17,6 +17,7 @@ jobs:
         source_file: 'data-science-notes.md'
         destination_repo: 'chnynf/chnynf.github.io'
         destination_folder: 'source/_posts'
+        destination_branch: 'source'
         user_email: 'chnynf_dsnotes@users.noreply.github.com'
         user_name: 'chnynf_dsnotes'
         commit_message: 'Updating the ds notes file.'
