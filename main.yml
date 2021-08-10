@@ -1,0 +1,22 @@
+name: Push File to chnynf's hexo site
+
+on: push
+
+jobs:
+  copy-file:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Pushes test file
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'data-science-notes.md'
+        destination_repo: 'chnynf/chnynf.github.io'
+        destination_folder: 'source/_posts'
+        user_email: 'chnynf_dsnotes@users.noreply.github.com'
+        user_name: 'chnynf_dsnotes'
+        commit_message: 'Updating the ds notes file.'
