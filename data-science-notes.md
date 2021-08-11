@@ -41,7 +41,7 @@ The probability function is:
 {% katex %}
 f(x) = p^x(1-p)^{1-x}
 {% endkatex %}
-for {% katex %} x \in \left \(0,1) \right. {% endkatex %}
+for {% katex %} x \in \left \{ 0, 1 \right \} {% endkatex %}
 
 **The binomial distribution:**
 
@@ -49,10 +49,12 @@ Flip the coin n times and let X be the number of heads, then
 {% katex %}
 X \sim Binomial(p)
 {% endkatex %}
+{% katex %}
 f(x) = \left\{ \begin{array}{l}
      \binom{n}{x}p^x(1-p)^{n-x} \ \ \ for \ x = 0,...,n \\
      0\ \ \ otherwise.
  \end{array} \right.
+{% endkatex %}
 
  (Sum of binomials are also binomials.)
 
