@@ -13,18 +13,18 @@ A random variable is a mapping {% katex %}X : \Omega \rightarrow \mathbb{R}{% en
 ### Some important discrete random variables
 **The point mass distribution:**
 {% katex %}
-<!-- F(x) = \left\{\begin{array}\
-0\ \ \ x< a\\ 
-1\ \ \ x\geq a
-\end{array}\right. -->
+F(x) = \left\{ \begin{array}{l}
+     0 \ \ \ x< a \\
+     1\ \ \ x\geq a
+ \end{array} \right.
 {% endkatex %}
 
 **The discrete uniform distribution:**
 {% katex %}
-<!-- F(x) = \left\{\begin{array}\
-1/k\ \ \ for \ x = 1,...,k \\
-0\ \ \ otherwise
-\end{array}\right. -->
+F(x) = \left\{ \begin{array}{l}
+     1/k \ \ \ for x = 1,...,k \\
+     0\ \ \ otherwise.
+ \end{array} \right.
 {% endkatex %}
 
 
