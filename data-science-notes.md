@@ -8,10 +8,13 @@ tags:
 ## Intro
 This is going to be a place where I (slowly) update my data science notes to keep my memory refreshed. I've created another Github reporsitory chnynf/data-science-notes to host this markdown file and use Github Actions to automatically push the md file to this post. I'll be glad if anyone can contribute together to the notes. Most of the snippets here will be the ones I pick up from the internet, from me and my friend's notes, and from the book All of Statistics: A Concise Course in Statistical Inference, from Larry A. Wasserman.
 
+---
+
 ## Random Variables
 A random variable is a mapping {% katex %}X : \Omega \rightarrow \mathbb{R}{% endkatex %} that assigns a real number {% katex %}X(\omega){% endkatex %} to each outcome {% katex %}\omega{% endkatex %}.
 ### Some important discrete random variables
 **The point mass distribution:**
+
 {% katex %}
 F(x) = \left\{ \begin{array}{l}
      0 \ \ \ x< a \\
@@ -20,15 +23,41 @@ F(x) = \left\{ \begin{array}{l}
 {% endkatex %}
 
 **The discrete uniform distribution:**
+
 {% katex %}
-F(x) = \left\{ \begin{array}{l}
-     1/k \ \ \ for x = 1,...,k \\
+f(x) = \left\{ \begin{array}{l}
+     1/k \ \ \ for \ x = 1,...,k \\
      0\ \ \ otherwise.
  \end{array} \right.
 {% endkatex %}
 
+**The bernoulli distribution:**
+
+Let X represent a coin flip. Then P(X = 1) = p and P(X = 0) = 1-p for some p between 0 and 1. We say that X has a Bernoulli distribution written 
+{% katex %}
+X \sim Bernoulli(p)
+{% endkatex %}
+The probability function is:
+{% katex %}
+f(x) = p^x(1-p)^{1-x}
+{% endkatex %}
+for {% katex %} x \in \left \(0,1) \right. {% endkatex %}
+
+**The binomial distribution:**
+
+Flip the coin n times and let X be the number of heads, then 
+{% katex %}
+X \sim Binomial(p)
+{% endkatex %}
+f(x) = \left\{ \begin{array}{l}
+     \binom{n}{x}p^x(1-p)^{n-x} \ \ \ for \ x = 0,...,n \\
+     0\ \ \ otherwise.
+ \end{array} \right.
+
+ (Sum of binomials are also binomials.)
 
 
+---
 ## Miscellaneous
 ### Statistics / Data Mining Dictionary
 
