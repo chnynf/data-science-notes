@@ -61,7 +61,7 @@ f(x) = \left\{ \begin{array}{l}
  \end{array} \right.
 {% endkatex %}
 
-(Sum of binomials are also binomials.)
+ (Sum of binomials are also binomials.)
 
 **The Geometric Distribution:**
  
