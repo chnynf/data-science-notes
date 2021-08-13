@@ -8,13 +8,17 @@ tags:
 ## Intro
 This is going to be a place where I (slowly) update my data science notes to keep my memory refreshed. I've created another Github reporsitory chnynf/data-science-notes to host this markdown file and use Github Actions to automatically push the md file to this post. I'll be glad if anyone can contribute together to the notes. Most of the snippets here will be the ones I pick up from the internet, from me and my friend's notes, and from the book All of Statistics: A Concise Course in Statistical Inference, from Larry A. Wasserman.
 
+<\br>
+
 ---
+
+<\br>
 
 ## Random Variables
 A random variable is a mapping {% katex %}X : \Omega \rightarrow \mathbb{R}{% endkatex %} that assigns a real number {% katex %}X(\omega){% endkatex %} to each outcome {% katex %}\omega{% endkatex %}.
 
 ### Some important discrete random variables
-- **The Point Mass Distribution:**
+**The Point Mass Distribution:**
 
 {% katex %}
 F(x) = \left\{ \begin{array}{l}
@@ -23,7 +27,7 @@ F(x) = \left\{ \begin{array}{l}
  \end{array} \right.
 {% endkatex %}
 
-- **The Discrete Uniform Distribution:**
+**The Discrete Uniform Distribution:**
 
 {% katex %}
 f(x) = \left\{ \begin{array}{l}
@@ -32,7 +36,7 @@ f(x) = \left\{ \begin{array}{l}
  \end{array} \right.
 {% endkatex %}
 
-- **The Bernoulli Distribution:**
+**The Bernoulli Distribution:**
 
 Let X represent a coin flip. Then P(X = 1) = p and P(X = 0) = 1-p for some p between 0 and 1. We say that X has a Bernoulli distribution written 
 {% katex %}
@@ -43,7 +47,7 @@ The probability function is:
 f(x) = p^x(1-p)^{1-x}
 {% endkatex %} for {% katex %} x \in \left \{ 0, 1 \right \} {% endkatex %}
 
-- **The Binomial Distribution:**
+**The Binomial Distribution:**
 
 Flip the coin n times and let X be the number of heads, then 
 {% katex %}
@@ -59,7 +63,7 @@ f(x) = \left\{ \begin{array}{l}
 
 (Sum of binomials are also binomials.)
 
-- **The Geometric Distribution:**
+**The Geometric Distribution:**
  
 The number of flips needed until the first heads when flipping a coin:
 {% katex %}
@@ -70,7 +74,7 @@ X \sim Geom(p)
 \mathbb{P}(X-k) = p(1-p)^{k-1}, \ \ k\geq 1
 {% endkatex %}
 
-- **The Poisson Distribution:**
+**The Poisson Distribution:**
 
 Count of rare events like radioactive decay and traffic accidents:
 {% katex %}
@@ -81,10 +85,10 @@ X \sim Poisson(\lambda)
 f(x) = e^{-\lambda}\frac{\lambda^x}{x!} \ \ \ x \geq 0
 {% endkatex %}
 
-(Sum of Poissons are also Poissons.)
+ (Sum of Poissons are also Poissons.)
 
 ### Some important continuous random variables
-- **The Uniform Distribution:**
+**The Uniform Distribution:**
 {% katex %}
 f(x) = \left\{ \begin{array}{l}
      \frac{1}{b-a} \ \ \ for \ x \in [a,b] \\
@@ -92,7 +96,7 @@ f(x) = \left\{ \begin{array}{l}
  \end{array} \right.
 {% endkatex %}
 
-- **The Normal (Gaussian) Distribution:**
+**The Normal (Gaussian) Distribution:**
 {% katex %}
 X \sim N(\mu, \sigma^2)
 {% endkatex %}
@@ -101,7 +105,7 @@ X \sim N(\mu, \sigma^2)
 f(x) = \frac{1}{\sigma \sqrt{2\pi}} exp\left \{-\frac{1}{2\sigma^2}(x-\mu)^2  \right \}
 {% endkatex %}
 
-- **The Exponential Distribution:**
+**The Exponential Distribution:**
 Usually used to model the lifetimes of electronic components and the waiting times between rare events:
 {% katex %}
 X \sim Exp(\beta)
@@ -110,6 +114,7 @@ X \sim Exp(\beta)
 {% katex %}
 f(x) = \frac{1}{\beta}e^{-x/\beta}, \ \ \ x > 0
 {% endkatex %}
+
 
 
 
