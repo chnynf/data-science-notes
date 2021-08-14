@@ -1,7 +1,7 @@
 ---
 title: Data Science Notes
 date: 2021-08-09 00:50:30
-updated: 2021-08-12
+updated: 2021-08-13
 tags:
 ---
 
@@ -12,7 +12,9 @@ This is going to be a place where I (slowly) update my data science notes to kee
 
 ---
 
-<\br>
+&nbsp;
+
+&nbsp;
 
 ## Random Variables
 A random variable is a mapping {% katex %}X : \Omega \rightarrow \mathbb{R}{% endkatex %} that assigns a real number {% katex %}X(\omega){% endkatex %} to each outcome {% katex %}\omega{% endkatex %}.
@@ -38,7 +40,6 @@ f(x) = \left\{ \begin{array}{l}
 
 **The Bernoulli Distribution:**
 
-Let X represent a coin flip. Then P(X = 1) = p and P(X = 0) = 1-p for some p between 0 and 1. We say that X has a Bernoulli distribution written 
 {% katex %}
 X \sim Bernoulli(p)
 {% endkatex %}
@@ -53,6 +54,8 @@ Flip the coin n times and let X be the number of heads, then
 {% katex %}
 X \sim Binomial(p)
 {% endkatex %}
+
+The probability function is:
 
 {% katex %}
 f(x) = \left\{ \begin{array}{l}
@@ -70,6 +73,8 @@ The number of flips needed until the first heads when flipping a coin:
 X \sim Geom(p)
 {% endkatex %}
 
+The probability function is:
+
 {% katex %}
 \mathbb{P}(X-k) = p(1-p)^{k-1}, \ \ k\geq 1
 {% endkatex %}
@@ -81,11 +86,15 @@ Count of rare events like radioactive decay and traffic accidents:
 X \sim Poisson(\lambda)
 {% endkatex %}
 
+The probability function is:
+
 {% katex %}
 f(x) = e^{-\lambda}\frac{\lambda^x}{x!} \ \ \ x \geq 0
 {% endkatex %}
 
- (Sum of Poissons are also Poissons.)
+(Sum of Poissons are also Poissons.)
+
+&nbsp;
 
 ### Some important continuous random variables
 **The Uniform Distribution:**
@@ -101,8 +110,10 @@ f(x) = \left\{ \begin{array}{l}
 X \sim N(\mu, \sigma^2)
 {% endkatex %}
 
+The probability function is:
+
 {% katex %}
-f(x) = \frac{1}{\sigma \sqrt{2\pi}} exp\left \{-\frac{1}{2\sigma^2}(x-\mu)^2  \right \}
+f(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp\left \{-\frac{1}{2\sigma^2}(x-\mu)^2  \right \}
 {% endkatex %}
 
 **The Exponential Distribution:**
@@ -111,16 +122,81 @@ Usually used to model the lifetimes of electronic components and the waiting tim
 X \sim Exp(\beta)
 {% endkatex %}
 
+The probability function is:
 {% katex %}
 f(x) = \frac{1}{\beta}e^{-x/\beta}, \ \ \ x > 0
 {% endkatex %}
 
+**The Gamma Distribution:**
+For alpha > 0, the Gamma function is defined as: 
+{% katex %}
+\Gamma(\alpha) = \int_{0}^{\infty}y^{a-1}e^{-y}dy
+{% endkatex %}
 
+X has a Gamma distribution denoted by:
+{% katex %}
+X \sim Gamma(\alpha, \beta)
+{% endkatex %}
 
+if:
 
+{% katex %}
+f(x) = \frac{1}{\beta^\alpha\Gamma(\alpha)}x^{\alpha-1}e^{-x/\beta}, \ \ x > 0, \ \ \alpha,\beta > 0
+{% endkatex %}
 
+The exponential distribution is a just a Gamma distribution with alpha equal 1.
+
+**The Beta Distribution:**
+{% katex %}
+X \sim Beta(\alpha, \beta)
+{% endkatex %}
+
+if:
+{% katex %}
+f(x) = \frac{x^{\alpha-1}(1-x)^{\beta-1}}{B(\alpha, \beta)}
+{% endkatex %}
+
+in which Beta function is defined as:
+{% katex %}
+B(\alpha, \beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha + \beta)}
+{% endkatex %}
+
+**The t and Cauchy Distribution:**
+{% katex %}
+X \sim t_\nu 
+{% endkatex %}
+
+if:
+{% katex %}
+f(x) = \frac{\Gamma(\frac{\nu+1}{2})}{\Gamma(\frac{\nu}{2})}\frac{1}{(1+\frac{x^2}{\nu})^{(\nu+1)/2}}
+{% endkatex %}
+
+The t distribution is similar to a Normal but it has thicker tails. In fact, the Normal corresponds to a t with nu equaling infinity. The Cauchy distribution is a special case of the t distribution corresponding to a t with nu of 1. The density is:
+{% katex %}
+f(x) = \frac{1}{\pi(1+x^2)}
+{% endkatex %}
+
+**The Chi-Square Distribution:**
+{% katex %}
+X \sim \chi^2_p
+{% endkatex %}
+
+if:
+{% katex %}
+f(x) = \frac{x^{(p/2)-1}e^{-x/2}}{\Gamma(p/2)2^{p/2}}, \ \ x > 0
+{% endkatex %}
+
+If Z_1, ..., Z_p are independent standard Normal random variables then 
+{% katex %}
+\sum^p_{i=1}Z_i^2 \sim \chi_p^2
+{% endkatex %}
 
 ---
+
+&nbsp;
+
+&nbsp;
+
 ## Miscellaneous
 ### Statistics / Data Mining Dictionary
 
