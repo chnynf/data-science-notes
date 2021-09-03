@@ -19,7 +19,7 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_file: 'data-science-notes.md'
+        source_file: 'data-science-notes'
         destination_repo: 'chnynf/chnynf.github.io'
         destination_folder: 'source/_posts'
         destination_branch: 'source'
