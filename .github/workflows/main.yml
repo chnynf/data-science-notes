@@ -14,12 +14,25 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Pushes test file
+    - name: Pushes asset folder
       uses: dmnemec/copy_file_to_another_repo_action@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
         source_file: 'data-science-notes'
+        destination_repo: 'chnynf/chnynf.github.io'
+        destination_folder: 'source/_posts'
+        destination_branch: 'source'
+        user_email: 'chnynf_dsnotes@users.noreply.github.com'
+        user_name: 'chnynf_dsnotes'
+        commit_message: 'Updating the ds notes file.'
+    
+    - name: Pushes md file
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'data-science-notes.md'
         destination_repo: 'chnynf/chnynf.github.io'
         destination_folder: 'source/_posts'
         destination_branch: 'source'
