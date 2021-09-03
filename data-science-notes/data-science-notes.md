@@ -1,7 +1,7 @@
 ---
 title: Data Science Notes
 date: 2021-08-09 00:50:30
-updated: 2021-08-13
+updated: 2021-09-03
 tags:
 ---
 
@@ -214,3 +214,7 @@ If Z_1, ..., Z_p are independent standard Normal random variables then
 | Bayesian inference     | Bayesian inference    | statistical methods for using data to update subjective beliefs                                                  |
 | frequentist inference  |                       | statistical methods for producing point estimates and confidence intervals with guarantees on frequency behavior |
 | large deviation bounds | PAC learning          | uniform bounds on probability of errors                                                                          |
+
+
+### Common Derivatives
+test
