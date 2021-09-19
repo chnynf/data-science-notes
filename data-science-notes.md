@@ -216,4 +216,4 @@ If Z_1, ..., Z_p are independent standard Normal random variables then
 
 ### Common Derivatives
 ![](/data-science-notes/common_derivatives.png)
-{% asset_img derivative_rules.png %}
+![](/data-science-notes/derivative_rules.png)
