@@ -195,6 +195,110 @@ If Z_1, ..., Z_p are independent standard Normal random variables then
 
 &nbsp;
 
+## Machine Learning and Deep Learning
+
+### Activation Functions
+**Sigmoid**
+- 0 to 1
+- Lose gradient at both ends
+- Computation is exponential term
+
+**Tanh**
+- -1 to 1 (centered at 0)
+- Lose gradient at both ends
+- Still computationally heavy
+
+**ReLU**
+- No saturation on positive end
+- Can cause dead neuron (if x <= 0)
+- Cheap to compute
+
+**Leaky ReLU**
+- Learnable parameter
+- No saturation
+- No dead neuron
+- Still cheap to compute
+
+*No one activation is best. ReLU is typical starting point. Sigmoid is typically avoided in deep learning due to the computation cost.
+
+&nbsp;
+
+### Back Propagation
+![](/data-science-notes/backpropagation_example.png)
+
+&nbsp;
+
+### Initialization
+Ideally, we'd like to maintain the variance at the output to be similar 
+to that of input.
+
+**Xavier Initialization**
+
+![](/data-science-notes/xavier_initialization.png)
+
+In practice, simpler versions perform empirically well:
+For tanh or similar activations:
+{% katex %}
+N(0, 1) * \sqrt{\frac{1}{n_j}}
+{% endkatex %}
+
+For ReLu activations: 
+{% katex %}
+N(0, 1) * \sqrt{\frac{1}{n_j/2}}
+{% endkatex %}
+
+&nbsp;
+
+### Optimizers
+
+![](/data-science-notes/optimizers.gif)
+
+&nbsp;
+
+### Regularization
+**L1**
+
+{% katex %}
+L = |y - Wx_i|^2 + \lambda|W| 
+{% endkatex %}
+
+*Better for feature selection.
+
+**L2**
+
+{% katex %}
+L = |y - Wx_i|^2 + \lambda|W|^2
+{% endkatex %}
+
+**Dropout Regularization**
+
+For each node, keep its output with probability p; Activations of deactivated nodes are essentially zero. During testing, no nodes are dropped. During test time, scale outputs (or equivalently weights) by p, so that train and test-time input/output can have similar distributions.
+
+
+
+&nbsp;
+
+### Evaluation
+![](/data-science-notes/confusion_matrix.png)
+
+&nbsp;
+
+### Sizes of convolution and pooling layer outputs
+![](/data-science-notes/cnn_size_example.png)
+
+- Valid convolution -- no padding
+- Same convolution -- enough padding added maintain same input and output size
+- Full convolution -- enough zeros are added for every pixel to be visited k times in each direction, resulting in an output image of width m + k − 1
+
+![](/data-science-notes/types_of_paddings.gif)
+
+
+---
+
+&nbsp;
+
+&nbsp;
+
 ## Miscellaneous
 ### Statistics / Data Mining Dictionary
 
