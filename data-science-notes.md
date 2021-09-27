@@ -202,6 +202,22 @@ The central limit theorem states that if you have a population with mean μ and 
 \sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}}
 {% endkatex %}
 
+---
+
+&nbsp;
+
+&nbsp;
+
+## Inferences
+
+Point estimation refers to providing a single "best guess" of some quantity of interest.
+
+Let X_1, ... X_n, be n IID data point from some distribution F. A point estimator θ^ of a parameter θ is some function of X_1, ..., X_n:  θ^ = g(X_1, ..., X_n)
+
+We define bias as the difference between θ^'s expectation and θ.
+
+
+---
 
 &nbsp;
 
