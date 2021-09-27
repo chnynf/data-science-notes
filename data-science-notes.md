@@ -218,10 +218,59 @@ We call H0 the null hypothesis and H1 the alternative hypothesis.
 Let X be data and let X be the range of X. We test a hypothesis by finding an
 appropriate subset of outcomes R ⊂ X called the rejection region. If X ∈ R we
 reject the null hypothesis, otherwise, we do not reject the null hypothesis:
+
 X ∈ R ⇒ reject H0
-X not ∈ R ⇒ accept H0
+
+X ∉ R ⇒ accept H0
+
+Usually the rejection region R is of the form
+R = {x ∈ X : T(x) < c}
+where T is a test statistic and c is a critical value. The main problem in
+hypothesis testing is to find an appropriate test statistic T and an appropriate cutoff value c.
+
+&nbsp;
+
+### Type I Error and Type II Error
+
+In hypothesis testing, there are two types of errors we can make:
+
+- Rejecting H0 when H0 is true is called a type I error
+
+- Accepting H0 when H1 is true is called a type II error
 
 
+The probability of a type I error is called the significance level of the test
+and is denoted by α
+ - α = P(type I error) = P(Reject H0|H0)
+
+The probability of a type II error is denoted by β
+- β = P(type II error) = P(Accept H0|H1)
+
+(1 − β) is called the power of the test
+- power = 1 − β = 1 − P(Accept H0|H1) = P(Reject H0|H1)
+
+Thus, the power of the test is the probability of rejecting H0 when it is false.
+
+![](/data-science-notes/trade_off_between_alpha_beta.png)
+
+&nbsp;
+
+### Simple hypothesis vs composite hypothesis
+
+A hypothesis of the form θ = θ0 is called a simple hypothesis, which corresponds to two-sided tests.
+
+A hypothesis of the form θ > θ0 or θ < θ0 is called a composite hypothesis, which corresponds to one-sided tests.
+
+&nbsp;
+
+### P-value
+
+The probability of obtaining test results at least as extreme as the results actually observed, under the assumption that the null hypothesis is correct.
+
+Suppose for every α ∈ (0, 1) we have a test of significance level α with rejection
+region Rα. Then, the p-value is the smallest significance level at which we can
+reject H0:
+p-value = inf{α : X ∈ Rα}
 
 
 ---
