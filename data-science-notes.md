@@ -397,6 +397,24 @@ $$
 \frac{p_1 - p_0}{\sqrt{p_0(1-p_0)}}
 $$
 
+In the case of two independent samples of continuous outcomes:
+
+$$
+n = 2(\frac{Z_{1-\alpha/2} + Z_{1-\beta}}{ES})^2
+$$
+
+*n is the sample size of each group, not combined.
+
+Recall that in the ES calculation, σ is the standard deviation of the outcome of interest. If data are available on variability of the outcome in each comparison group, a pooled estimate of the common standard deviation can be calculated as:
+
+$$S_p = \sqrt{\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1+n_2-2}}$$
+
+
+&nbsp;
+
+### Summary
+
+![](/data-science-notes/sample_size_calculation_summary.png)
 
 
 ---
