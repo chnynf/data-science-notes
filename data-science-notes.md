@@ -339,15 +339,40 @@ region Rα. Then, the p-value is the smallest significance level at which we can
 reject H0:
 p-value = inf{α : X ∈ Rα}
 
+---
+
 &nbsp;
 
-### Power and Sample Size Determination
+&nbsp;
+
+
+## Power and Sample Size Determination
 
 A critically important aspect of any study is determining the appropriate sample size to answer the research question.
 
 The formulas presented here generate estimates of the necessary sample size(s) required based on statistical criteria. (However, in many studies, the sample size is determined by financial or logistical constraints.)
 
+More details at:
+https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_power/BS704_Power_print.html
 
+### For confidence intervals
+
+The length of the confidence interval is determined by:
+$$E = Z\frac{\sigma}{\sqrt{n}}$$
+Our goal is to determine the sample size, n, that ensures that the margin of error, "E," does not exceed a specified value. We can take the formula above and, with some algebra, solve for n:
+$$n = (\frac{Z\sigma}{E})^2$$
+*Sigma is the population standard deviation, but is estimated based on sample. The unbiased estimation of population variance using sample is calculated as the sum of (x - mean)^2 divided by n-1 instead of n.
+
+In the case dichotomous outcomes, sigma squared in the above formula can be swapped to p(1-p), which is equal to the variance of a binary vector.
+
+In the case of two samples, referring to the formulas above in the [Confidence Interval for Two Independent Samples](#Confidence-Interval-for-Two-Independent-Samples). A similar formula to calculate n can be derived.
+
+
+### For hypothesis testing
+
+In hypothesis testing, because we purposely select a small value for α , we control the probability of committing a Type I error. The second type of error is called a Type II error and it is defined as the probability we do not reject H0 when it is false. The probability of a Type II error is denoted β , and β =P(Type II error) = P(Do not Reject H0 | H0 is false). In hypothesis testing, we usually focus on power, which is defined as the probability that we reject H0 when it is false, i.e., power = 1- β = P(Reject H0 | H0 is false). Power is the probability that a test correctly rejects a false null hypothesis. A good test is one with low probability of committing a Type I error (i.e., small α ) and high power (i.e., small β, high power).  
+
+Here we present formulas to determine the sample size required to ensure that a test has high power. The sample size computations depend on the level of significance, aα, the desired power of the test (equivalent to 1-β), the variability of the outcome, and the effect size. The effect size is the difference in the parameter of interest that represents a clinically meaningful difference. Similar to the margin of error in confidence interval applications, the effect size is determined based on clinical or practical criteria and not statistical criteria.  
 
 
 
