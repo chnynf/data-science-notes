@@ -1,7 +1,7 @@
 ---
 title: Data Science Notes
 date: 2021-08-09 00:50:30
-updated: 2021-09-19
+updated: 2021-09-26
 tags:
 ---
 
@@ -189,11 +189,28 @@ If Z_1, ..., Z_p are independent standard Normal random variables then
 \sum^p_{i=1}Z_i^2 \sim \chi_p^2
 {% endkatex %}
 
+&nbsp;
+
+### Convergence of random variables
+
+**Law of Large Numbers:**
+Sample average *converges in probability* to the expectation E(X) (average of the population).
+
+**Central Limit Therom:**
+The central limit theorem states that if you have a population with mean μ and standard deviation σ and take sufficiently large random samples from the population with replacement, then the distribution of the sample means *converges in distribution* to a normal distribution. This will hold true regardless of whether the source population is normal or skewed, provided the sample size is sufficiently large (usually n > 30). If the population is normal, then the theorem holds true even for samples smaller than 30. Sample variance can be calculated as:
+{% katex %}
+\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}}
+{% endkatex %}
+
+
+
+
 ---
 
 &nbsp;
 
 &nbsp;
+
 
 ## Machine Learning and Deep Learning
 
