@@ -24,19 +24,19 @@ that assigns a real number X(ω) to each outcome ω.
 **The Point Mass Distribution:**
 
 $$
-F(x) = \left\{ \begin{array}{l}
-     0 \ \ \ x< a \\
+F(x) = \begin{cases}
+     0 \ \ \ x< a   \\\\
      1\ \ \ x\geq a
- \end{array} \right.
+       \end{cases}
 $$
 
 **The Discrete Uniform Distribution:**
 
 $$
-f(x) = \left\{ \begin{array}{l}
-     1/k \ \ \ for \ x = 1,...,k \\
+f(x) = { \begin{cases}
+     1/k \ \ \ for \ x = 1,...,k \\\\
      0\ \ \ otherwise.
- \end{array} \right.
+ \end{cases}}
 $$
 
 **The Bernoulli Distribution:**
@@ -46,7 +46,7 @@ X \sim Bernoulli(p)
 $$
 The probability function is:
 $$
-f(x) = p^x(1-p)^{1-x} \ \ \ for \  x \in \left \{ 0, 1 \right \} 
+f(x) = p^x(1-p)^{1-x} \ \ \ for \  x \in \\{ 0, 1\\} 
 $$
 
 **The Binomial Distribution:**
@@ -59,10 +59,10 @@ $$
 The probability function is:
 
 $$
-f(x) = \left\{ \begin{array}{l}
-     \binom{n}{x}p^x(1-p)^{n-x} \ \ \ for \ x = 0,...,n \\
+f(x) = { \begin{cases}
+     \binom{n}{x}p^x(1-p)^{n-x} \ \ \ for \ x = 0,...,n \\\\
      0\ \ \ otherwise.
- \end{array} \right.
+ \end{cases}}
 $$
 
  (Sum of binomials are also binomials.)
@@ -100,10 +100,10 @@ $$
 ### Some important continuous random variables
 **The Uniform Distribution:**
 $$
-f(x) = \left\{ \begin{array}{l}
-     \frac{1}{b-a} \ \ \ for \ x \in [a,b] \\
+f(x) = { \begin{cases}
+     \frac{1}{b-a} \ \ \ for \ x \in [a,b] \\\\
      0\ \ \ otherwise.
- \end{array} \right.
+ \end{cases}}
 $$
 
 **The Normal (Gaussian) Distribution:**
@@ -114,7 +114,7 @@ $$
 The probability function is:
 
 $$
-f(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp\left \{-\frac{1}{2\sigma^2}(x-\mu)^2  \right \}
+f(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp [-\frac{1}{2\sigma^2}(x-\mu)^2]
 $$
 
 **The Exponential Distribution:**
@@ -246,6 +246,31 @@ $$
 C_n = (\hat{\theta} - z_{\alpha/2}\hat{se}, \ \hat{\theta} + z_{\alpha/2}\hat{se})
 $$
 
+&nbsp;
+
+### Confidence Interval for Two Independent Samples
+In the two independent samples application with a continuous outcome, the parameter of interest is the difference in population means, μ1 - μ2. The point estimate for the difference in population means is the difference in sample means:
+
+$$\bar{X_1} - \bar{X_2}$$
+
+If we assume equal variances between groups, we can pool the information on variability (sample variances) to generate an estimate of the population variability:
+
+$$SE(\bar{X_1} - \bar{X_2}) = S_p\sqrt{1/n_1 + 1/n_2}$$
+
+where:
+
+$$S_p = \sqrt{\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1+n_2-2}}$$
+
+Then the confidence interval can be calculated as:
+
+$$(\bar{X_1} - \bar{X_2}) \pm zS_p\sqrt{1/n_1 + 1/n_2}$$
+
+or if the sample size is small:
+
+$$(\bar{X_1} - \bar{X_2}) \pm tS_p\sqrt{1/n_1 + 1/n_2}$$
+
+More examples and details:
+https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_confidence_intervals/bs704_confidence_intervals5.html
 
 ---
 
