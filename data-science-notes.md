@@ -203,6 +203,25 @@ The central limit theorem states that if you have a population with mean μ and 
 {% endkatex %}
 
 
+&nbsp;
+
+&nbsp;
+
+## Hypothesis Testing
+
+Suppose that we partition the parameter space Θ into two disjoint sets Θ0 and Θ1 and that we wish to test:
+
+H0 : θ ∈ Θ0 versus H1 : θ ∈ Θ1
+
+We call H0 the null hypothesis and H1 the alternative hypothesis.
+
+Let X be data and let X be the range of X. We test a hypothesis by finding an
+appropriate subset of outcomes R ⊂ X called the rejection region. If X ∈ R we
+reject the null hypothesis, otherwise, we do not reject the null hypothesis:
+X ∈ R ⇒ reject H0
+X not ∈ R ⇒ accept H0
+
+
 
 
 ---
