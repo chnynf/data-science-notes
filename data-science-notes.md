@@ -16,9 +16,7 @@ This is going to be a place where I (slowly) update my data science notes to kee
 &nbsp;
 
 ## Random Variables
-A random variable is a mapping 
-$$X : \Omega \rightarrow \mathbb{R}$$
-that assigns a real number X(ω) to each outcome ω.
+A random variable is a mapping $$X : \Omega \rightarrow \mathbb{R}$$ that assigns a real number X(ω) to each outcome ω.
 
 ### Some important discrete random variables
 **The Point Mass Distribution:**
@@ -213,8 +211,6 @@ $$
 
 ## Inferences
 
-&nbsp;
-
 ### Point estimation
 
 Point estimation refers to providing a single "best guess" of some quantity of interest.
@@ -342,6 +338,19 @@ Suppose for every α ∈ (0, 1) we have a test of significance level α with rej
 region Rα. Then, the p-value is the smallest significance level at which we can
 reject H0:
 p-value = inf{α : X ∈ Rα}
+
+&nbsp;
+
+### Power and Sample Size Determination
+
+A critically important aspect of any study is determining the appropriate sample size to answer the research question.
+
+The formulas presented here generate estimates of the necessary sample size(s) required based on statistical criteria. (However, in many studies, the sample size is determined by financial or logistical constraints.)
+
+
+
+
+
 
 
 ---
