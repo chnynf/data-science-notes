@@ -363,7 +363,7 @@ Our goal is to determine the sample size, n, that ensures that the margin of err
 $$n = (\frac{Z\sigma}{E})^2$$
 *Sigma is the population standard deviation, but is estimated based on sample. The unbiased estimation of population variance using sample is calculated as the sum of (x - mean)^2 divided by n-1 instead of n.
 
-In the case dichotomous outcomes, sigma squared in the above formula can be swapped to p(1-p), which is equal to the variance of a binary vector.
+In the case of dichotomous outcomes, sigma squared in the above formula can be swapped to p(1-p), which is equal to the variance of a binary vector.
 
 In the case of two samples, referring to the formulas above in the [Confidence Interval for Two Independent Samples](#Confidence-Interval-for-Two-Independent-Samples). A similar formula to calculate n can be derived.
 
@@ -372,9 +372,30 @@ In the case of two samples, referring to the formulas above in the [Confidence I
 
 In hypothesis testing, because we purposely select a small value for α , we control the probability of committing a Type I error. The second type of error is called a Type II error and it is defined as the probability we do not reject H0 when it is false. The probability of a Type II error is denoted β , and β =P(Type II error) = P(Do not Reject H0 | H0 is false). In hypothesis testing, we usually focus on power, which is defined as the probability that we reject H0 when it is false, i.e., power = 1- β = P(Reject H0 | H0 is false). Power is the probability that a test correctly rejects a false null hypothesis. A good test is one with low probability of committing a Type I error (i.e., small α ) and high power (i.e., small β, high power).  
 
-Here we present formulas to determine the sample size required to ensure that a test has high power. The sample size computations depend on the level of significance, aα, the desired power of the test (equivalent to 1-β), the variability of the outcome, and the effect size. The effect size is the difference in the parameter of interest that represents a clinically meaningful difference. Similar to the margin of error in confidence interval applications, the effect size is determined based on clinical or practical criteria and not statistical criteria.  
+Here we present formulas to determine the sample size required to ensure that a test has high power. The sample size computations depend on the level of significance, α, the desired power of the test (equivalent to 1-β), the variability of the outcome, and the effect size. The effect size is the difference in the parameter of interest that represents a clinically meaningful difference. Similar to the margin of error in confidence interval applications, the effect size is determined based on clinical or practical criteria and not statistical criteria.  
+
+In studies where the plan is to perform a test of hypothesis comparing the mean of a continuous outcome variable in a single population to a known mean, the hypotheses of interest are:
+
+H0: μ = μ 0 and H1: μ ≠ μ 0 where μ 0 is the known mean (e.g., a historical control). The formula for determining sample size to ensure that the test has a specified power is given below:
+
+$$
+n = (\frac{Z_{1-\alpha/2} + Z_{1-\beta}}{ES})^2
+$$
+
+Here ES is called the effective size, and it's calculated as:
+
+$$
+\frac{\mu_1 - \mu_0}{\sigma}
+$$
+
+where μ 0 is the mean under H0, μ 1 is the mean under H1 and σ is the standard deviation of the outcome of interest. 
 
 
+In the case of dichotomous outcomes, p would effectively be the means, and variance is basically p(1-p). So ES can be calculated as:
+
+$$
+\frac{p_1 - p_0}{\sqrt{p_0(1-p_0)}}
+$$
 
 
 
